@@ -7,7 +7,7 @@ namespace UwKluis\Enums\Traits;
 
 trait HasDescriptions
 {
-    abstract function getValue();
+    public abstract function getValue();
 
     /**
      * @return string
