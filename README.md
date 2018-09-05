@@ -1,4 +1,4 @@
-# UFO Client
+# UwKluis Enums
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -27,7 +27,15 @@ $ composer require uwkluis/enums
 ```
 
 ## Usage
+Instantiate enum objects with their allowed values.
+```.php
+<?php
+use \UwKluis\Enums\ConsumerConnection\Status;
 
+$status = new Status(Status::NEW);
+
+echo $status->getDescription();
+```
 
 ## Testing
 
