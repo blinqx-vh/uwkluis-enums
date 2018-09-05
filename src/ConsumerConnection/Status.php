@@ -4,12 +4,15 @@ declare(strict_types = 1);
 namespace UwKluis\Enums\ConsumerConnection;
 
 use MyCLabs\Enum\Enum;
+use UwKluis\Enums\Traits\HasDescriptions;
 
 /**
  * Class Status
  */
 final class Status extends Enum
 {
+    use HasDescriptions;
+
     /** @var string  */
     const NEW = 'new';
     /** @var string  */
@@ -44,12 +47,4 @@ final class Status extends Enum
             self::REVOKED     => 'De consument heeft de verbinding verbroken',
         ],
     ];
-
-    /**
-     * @return string
-     */
-    public function getDescription(string $lang): string
-    {
-        return self::$descriptions[$lang][$this->getValue()];
-    }
 }
