@@ -9,6 +9,8 @@ use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 use UwKluis\Enums\ConsumerConnection\Status;
 use UwKluis\Enums\Contracts\HasTranslations;
+use UwKluis\Enums\DataModel\AddressType;
+use UwKluis\Enums\DataModel\Gender;
 use UwKluis\Enums\DataModel\RepaymentType;
 
 class HasTranslationsTest extends TestCase
@@ -40,6 +42,8 @@ class HasTranslationsTest extends TestCase
         foreach ([
                      Status::class,
                      RepaymentType::class,
+                     Gender::class,
+                     AddressType::class,
                  ] as $className) {
             $reflectionClass = new ReflectionClass($className);
             if ($reflectionClass->implementsInterface(HasTranslations::class)) {
