@@ -15,6 +15,15 @@ use UwKluis\Enums\DataModel\RepaymentType;
 
 class HasTranslationsTest extends TestCase
 {
+    public function testGetTranslations()
+    {
+        foreach (RepaymentType::$translations as $language => $translations) {
+            $this->assertEquals($translations, RepaymentType::getTranslations($language));
+        }
+
+        $this->assertEquals(RepaymentType::$translations, RepaymentType::getTranslations());
+    }
+
     /**
      * @throws \ReflectionException
      */

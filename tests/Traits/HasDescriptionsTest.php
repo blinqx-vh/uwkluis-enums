@@ -13,6 +13,15 @@ use UwKluis\Enums\DataModel\RepaymentType;
 
 class HasDescriptionsTest extends TestCase
 {
+    public function testGetDescriptions()
+    {
+        foreach (Status::$descriptions as $language => $descriptions) {
+            $this->assertEquals($descriptions, Status::getDescriptions($language));
+        }
+
+        $this->assertEquals(Status::$descriptions, Status::getDescriptions());
+    }
+
 
     /**
      * @throws \ReflectionException

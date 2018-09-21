@@ -9,6 +9,11 @@ trait HasDescriptions
 {
     public abstract function getValue();
 
+    public static function getDescriptions(string $lang = null): array
+    {
+        return $lang ? self::$descriptions[$lang] : self::$descriptions;
+    }
+
     /**
      * @return string
      */

@@ -12,9 +12,9 @@ trait HasTranslations
      *
      * @return string
      */
-    public static function getTranslations(string $lang): array
+    public static function getTranslations(string $lang = null): array
     {
-        return self::$translations[$lang];
+        return $lang ? self::$translations[$lang] : self::$translations;
     }
 
     /**

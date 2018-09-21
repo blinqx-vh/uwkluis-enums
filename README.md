@@ -14,6 +14,9 @@ This package contains enumerations relevant to connecting to the UwKluis APIs, a
 ```
 src/
 src/ConsumerConnection
+src/Contracts
+src/DataModel
+src/Traits
 tests/
 ```
 
